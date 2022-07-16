@@ -1,0 +1,57 @@
+.custom_button {
+    text-transform: none !important;
+    margin-right: 1vh !important;
+}
+
+
+.main_page {
+    margin-top:9vh;
+    min-height: calc(91vh - 5px);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   
+}
+
+.navbar_nav {
+    height: 9vh;
+    display: "flex";
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between !important;
+    flex-wrap: nowrap;
+}
+
+
+.centered_parent {
+    margin-top:9vh;
+    min-height: calc(91vh - 5px);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.box_login {
+    margin: auto;
+}
+
+.add_task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_task_root {
+    display: flex;
+    position: absolute;
+    bottom: 2vh;
+    top: auto;
+}
+.cardAction_task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*PAGES*/
