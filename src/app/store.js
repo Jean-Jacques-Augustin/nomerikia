@@ -10,19 +10,25 @@ import {
      PURGE,
      REGISTER,
 } from "redux-persist";
+import { combineReducers } from "@reduxjs/toolkit";
+import { addTask, markSelected } from "./taskSlice";
 
 const persistConfig = {
      type: "persist/PERSIST",
      key: "root",
      storage,
 };
-const persistedReducer = persistReducer(persistConfig, changerTheme);
+
+const rootReducer = combineReducers({
+     changerTheme: changerTheme,
+     addTask: addTask,
+     markSelected: markSelected,
+});
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-     reducer: {
-          themeMode: persistedReducer,
-          connectedMode: persistedReducer,
-     },
+     reducer: persistedReducer,
      middleware: getDefaultMiddleware({
           serializableCheck: {
                ignoredActions: [

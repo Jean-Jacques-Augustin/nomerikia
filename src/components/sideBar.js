@@ -32,7 +32,6 @@ export default function SideBar() {
                     <List>
                          {SidebarLink.map((item, index) => (
                               <ListItem
-                                   // component={Link}
                                    to={item.path}
                                    key={index}
                                    disablePadding

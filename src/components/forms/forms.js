@@ -37,7 +37,7 @@ export const CustomTextField = (props) => {
                size={"medium"}
                value={props.value}
                label={props.label}
-               variant="filled"
+               variant="outlined"
                onChange={props.onChange}
                className={"TextField"}
                error={props.error}
