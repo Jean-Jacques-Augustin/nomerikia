@@ -1,65 +1,74 @@
 .custom_button {
-    text-transform: none !important;
-    margin-right: 1vh !important;
+     text-transform: none !important;
+     margin-right: 1vh !important;
 }
 
-
 .main_page {
-    margin-top:9vh;
-    min-height: calc(91vh - 5px);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-   
+     margin-top: 9vh;
+     min-height: calc(91vh - 5px);
+     display: flex;
+     justify-content: center;
+     align-content: center;
 }
 
 .navbar_nav {
-    height: 9vh;
-    display: "flex";
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between !important;
-    flex-wrap: nowrap;
+     height: 9vh;
+     display: "flex";
+     flex-direction: row;
+     align-content: center;
+     justify-content: space-between !important;
+     flex-wrap: nowrap;
 }
 
-
 .centered_parent {
-    margin-top:9vh;
-    min-height: calc(91vh - 5px);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+     margin-top: 9vh;
+     min-height: calc(91vh - 5px);
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-content: center;
 }
 
 .box_login {
-    margin: auto;
+     margin: auto;
 }
 
 .add_task {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .add_task_root {
-    display: flex;
-    position: absolute;
-    bottom: 2vh;
-    top: auto;
+     display: flex;
+     position: absolute;
+     bottom: 2vh;
+     top: auto;
 }
 .cardAction_task {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
 }
 
 /*Btn create*/
 
-.actionButtonCreate  {
-    text-transform: none !important;
-    margin-right: 2vh !important;
-    color: inherit !important;
+.actionButtonCreate {
+     text-transform: none !important;
+     margin-right: 2vh !important;
+     color: inherit !important;
+     border-radius: 0 !important;
+     padding: 0, 2vh !important;
 }
 
 /*PAGES*/
+
+.Avatar {
+     margin-left: 1vh;
+}
+
+.center {
+     display: flex;
+     justify-content: center;
+     margin-top: 2vh;
+}

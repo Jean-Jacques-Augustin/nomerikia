@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { Box } from "@mui/system";
-import { Avatar, Button, Grid, Paper, Typography } from "@mui/material";
+import { Avatar, Button, Grid, Paper, Typography, Box } from "@mui/material";
 import { CustomTextField } from "../components/forms/forms";
 import { CustomButton } from "./../components/forms/forms";
 import iconMeduim from "../icons/ICON/nomerikia_icon_small.png";
-import { Link } from "react-router-dom";
 
 export default function Login() {
      const [email, setemail] = useState("");
@@ -78,7 +76,7 @@ export default function Login() {
                                    name="Se connecter"
                                    color="primary"
                                    fullWidth={true}
-                                   clickAction={SeConnecterAuDB()}
+                                   clickAction={SeConnecterAuDB}
                               />
                          </Grid>
                          <Grid item md={12} xs={12}>

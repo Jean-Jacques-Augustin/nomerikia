@@ -9,7 +9,8 @@ import {
 } from "@mui/material";
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
-import CommentIcon from "@mui/icons-material/Comment";
+import CloseIcon from "@mui/icons-material/Close";
+import { Avatar } from "@mui/material";
 
 export const InputCheckBox = (props) => {
      return (
@@ -28,7 +29,9 @@ export const InputCheckBox = (props) => {
                          p: "2px 5px",
                          display: "flex",
                          alignItems: "center",
+                         width: 600,
                     }}
+                    fullWidth
                >
                     <InputBase
                          sx={{ ml: 1, flex: 1 }}
@@ -54,12 +57,9 @@ export const CheckBoxItem = (props) => {
           <ListItem
                secondaryAction={
                     <IconButton edge="end" aria-label="comments">
-                         <CommentIcon />
+                         <CloseIcon />
                     </IconButton>
                }
-               style={{
-                    border: "2px solid red",
-               }}
           >
                <ListItemIcon>
                     <Checkbox
@@ -67,14 +67,29 @@ export const CheckBoxItem = (props) => {
                          checked={props.checked}
                          tabIndex={-1}
                          disableRipple
-                         inputProps={{ "aria-labelledby": props.labelId }}
+                         inputProps={{ "aria-labelledby": props.text }}
                          onChange={props.SetCheck}
                     />
                </ListItemIcon>
-               <ListItemText
-                    id={props.labelId}
-                    primary={`Line item ${props.text}`}
-               />
+               <ListItemText id={props.text} primary={props.text} />
+          </ListItem>
+     );
+};
+
+export const CheckBoxUserShare = (props) => {
+     return (
+          <ListItem>
+               <ListItemIcon>
+                    <Checkbox
+                         checked={props.checked}
+                         tabIndex={-1}
+                         disableRipple
+                         inputProps={{ "aria-labelledby": props.email }}
+                         onChange={props.setShare}
+                    />
+               </ListItemIcon>
+               <Avatar>{props.email[0]}</Avatar>
+               <ListItemText id={props.text} primary={props.email} />
           </ListItem>
      );
 };

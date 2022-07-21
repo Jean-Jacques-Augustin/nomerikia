@@ -12,14 +12,14 @@ import {
      ListItemIcon,
      ListItemText,
      Avatar,
+     Container,
 } from "@mui/material";
 import { Task } from "./testDB";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import MenuAction from "../components/forms/menu";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
-import { Container } from "@mui/system";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ActionButton = [
      {
@@ -104,25 +104,13 @@ export default function MainPage() {
                                                                       "center",
                                                             }}
                                                        >
-                                                            <Avatar
-                                                                 sx={{
-                                                                      marginLeft: 1,
-                                                                 }}
-                                                            >
+                                                            <Avatar className="Avatar">
                                                                  A
                                                             </Avatar>
-                                                            <Avatar
-                                                                 sx={{
-                                                                      marginLeft: 1,
-                                                                 }}
-                                                            >
+                                                            <Avatar className="Avatar">
                                                                  B
                                                             </Avatar>
-                                                            <Avatar
-                                                                 sx={{
-                                                                      marginLeft: 1,
-                                                                 }}
-                                                            >
+                                                            <Avatar className="Avatar">
                                                                  C
                                                             </Avatar>
                                                             {/* Rehefa misy sary dia
