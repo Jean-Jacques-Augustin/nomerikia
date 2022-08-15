@@ -72,3 +72,25 @@
      justify-content: center;
      margin-top: 2vh;
 }
+
+.dialog_content {
+     padding: 2vh;
+}
+
+.checkbox_share {
+     display: flex;
+     padding: 0 2vh;
+     align-content: center;
+     justify-content: start;
+     margin-top: 2vh;
+}
+
+.share_btn {
+     text-transform: none !important;
+}
+
+.share_parent {
+     display: flex;
+     justify-content: center;
+     padding: 2vh;
+}

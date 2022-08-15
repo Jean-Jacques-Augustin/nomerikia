@@ -6,11 +6,14 @@ import {
      ListItem,
      ListItemIcon,
      ListItemText,
+     Typography,
 } from "@mui/material";
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import { Avatar } from "@mui/material";
+import { FormGroup } from "@mui/material";
+import { FormControlLabel } from "@mui/material";
 
 export const InputCheckBox = (props) => {
      return (
@@ -78,18 +81,13 @@ export const CheckBoxItem = (props) => {
 
 export const CheckBoxUserShare = (props) => {
      return (
-          <ListItem>
-               <ListItemIcon>
-                    <Checkbox
-                         checked={props.checked}
-                         tabIndex={-1}
-                         disableRipple
-                         inputProps={{ "aria-labelledby": props.email }}
-                         onChange={props.setShare}
+          <Paper variant="outlined" className="checkbox_share">
+               <FormGroup>
+                    <FormControlLabel
+                         control={<Checkbox defaultChecked />}
+                         label={props.email}
                     />
-               </ListItemIcon>
-               <Avatar>{props.email[0]}</Avatar>
-               <ListItemText id={props.text} primary={props.email} />
-          </ListItem>
+               </FormGroup>
+          </Paper>
      );
 };

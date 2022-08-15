@@ -16,6 +16,7 @@ import { DialogContent } from "@mui/material";
 import { DialogContentText } from "@mui/material";
 import { DialogActions } from "@mui/material";
 import { SearchBar } from "./../forms/forms";
+import ShareIcon from "@mui/icons-material/Share";
 
 export default function Create() {
      /**
@@ -76,6 +77,10 @@ export default function Create() {
           setOpenDialogShare(false);
      };
 
+     /**
+      *
+      * @returns Component dialog, misokatra ref openDialogShare=true
+      */
      const UserDialog = () => {
           return (
                <Dialog
@@ -84,24 +89,29 @@ export default function Create() {
                     aria-labelledby="titre-du-dialogue"
                     aria-describedby="dilogue-misokatra-rehefa-hanao-partage"
                >
-                    <DialogTitle id="titre-du-dialogue">
-                         {"Pargager ce notes avec des membres"}
-                    </DialogTitle>
-                    <DialogContent>
-                         <DialogContentText id="dialog-description">
-                              <SearchBar />
-                              {UsersData.map((item, key) => (
-                                   <CheckBoxUserShare
-                                        key={key}
-                                        checked={checked}
-                                        email={item.name}
-                                   />
-                              ))}
-                         </DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
-                         <Button variant={"contained"}>Ajouter</Button>
-                    </DialogActions>
+                    <div className="dialog_content">
+                         <Typography>
+                              Ajouter de(s) collaborateur(s) pour ce tache
+                         </Typography>
+                         <br />
+                         <SearchBar />
+                         {UsersData.map((item, key) => (
+                              <CheckBoxUserShare
+                                   key={key}
+                                   checked={checked}
+                                   email={item.email}
+                              />
+                         ))}
+                         <div className="share_parent">
+                              <Button
+                                   startIcon={<ShareIcon />}
+                                   className="share_btn"
+                                   variant="outlined"
+                              >
+                                   Partager
+                              </Button>
+                         </div>
+                    </div>
                </Dialog>
           );
      };
